@@ -28,4 +28,4 @@ target_link_libraries(${PROJECT_NAME} PRIVATE unofficial::nana::nana)
 -DCMAKE_TOOLCHAIN_FILE=[vcpkg root]/scripts/buildsystems/vcpkg.cmake
 
 # cmake .. -DCMAKE_TOOLCHAIN_FILE=/home/ciaolee/cpp_libs/vcpkg/scripts/buildsystems/vcpkg.cmake
-~~~
+~~~ 

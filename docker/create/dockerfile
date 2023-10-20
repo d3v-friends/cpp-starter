@@ -1,0 +1,9 @@
+FROM ubuntu:23.10
+
+RUN sudo apt-get install zsh
+
+
+# run -it -u root ubuntu:23.10 /bin/bash
+
+# todo cpp 컴파일 하기 위한 이미지 생성하여 공유하기
+
