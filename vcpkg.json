@@ -1,0 +1,15 @@
+{
+    "name": "cpp-starter",
+    "$package-name": "starter",
+    "$cpp-version": "20",
+    "version-string": "0.0.1",
+    "dependencies": [],
+    "features": {
+        "tests": {
+            "description": "gtest",
+            "dependencies": [
+                "gtest"
+            ]
+        }
+    }
+}

@@ -1,0 +1,38 @@
+#pragma code_page(65001)   // 이 파일을 UTF-8로 해석 (한글 문자열용)
+#include <winver.h>
+
+// 아이콘: ID가 가장 작은 아이콘이 exe 아이콘으로 쓰임
+1 ICON "@CMAKE_CURRENT_SOURCE_DIR@/platform/win32/app.ico"
+
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION     @PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@,0
+    PRODUCTVERSION  @PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@,0
+    FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+    FILEFLAGS       VS_FF_DEBUG
+#else
+    FILEFLAGS       0
+#endif
+    FILEOS          VOS_NT_WINDOWS32
+    FILETYPE        VFT_APP
+    FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"   // 0412 = 한국어, 04B0 = 유니코드
+        BEGIN
+            VALUE "CompanyName",      "d3v-friends"
+            VALUE "FileDescription",  "@PROJECT_NAME@"
+            VALUE "FileVersion",      "@PROJECT_VERSION@"
+            VALUE "InternalName",     "@PROJECT_NAME@"
+            VALUE "OriginalFilename", "@PROJECT_NAME@.exe"
+            VALUE "ProductName",      "@PROJECT_NAME@"
+            VALUE "ProductVersion",   "@PROJECT_VERSION@"
+            VALUE "LegalCopyright",   "d3v-friends Copyright (C) 2026"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0412, 1200
+    END
+END

@@ -1,0 +1,7 @@
+InheritParentConfig: true      # 상위 .clang-tidy 를 물려받고 아래만 덮어씀
+Checks: >
+    -cppcoreguidelines-avoid-non-const-global-variables,
+    -cppcoreguidelines-special-member-functions,
+    -readability-identifier-naming,
+    -readability-function-cognitive-complexity,
+    -cert-err58-cpp

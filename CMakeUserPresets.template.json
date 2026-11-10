@@ -1,0 +1,82 @@
+{
+    "version": 10,
+    "$schema": "https://raw.githubusercontent.com/Kitware/CMake/master/Help/manual/presets/schema.json",
+    "configurePresets": [
+        {
+            "name": "local-apple",
+            "hidden": true,
+            "environment": {
+                "VCPKG_ROOT": "/[[위치]]/vcpkg"
+            }
+        },
+        {
+            "name": "local-win32",
+            "hidden": true,
+            "environment": {
+                "VCPKG_ROOT": "C:/[[위치]]/vcpkg"
+            }
+        },
+        {
+            "name": "local-apple-debug",
+            "inherits": [
+                "apple-debug",
+                "local-apple"
+            ]
+        },
+        {
+            "name": "local-apple-release",
+            "inherits": [
+                "apple-release",
+                "local-apple"
+            ]
+        },
+        {
+            "name": "local-win32-debug",
+            "inherits": [
+                "win32-debug",
+                "local-win32"
+            ]
+        },
+        {
+            "name": "local-win32-release",
+            "inherits": [
+                "win32-release",
+                "local-win32"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "local-apple-debug",
+            "configurePreset": "local-apple-debug"
+        },
+        {
+            "name": "local-apple-release",
+            "configurePreset": "local-apple-release"
+        },
+        {
+            "name": "local-win32-debug",
+            "configurePreset": "local-win32-debug"
+        },
+        {
+            "name": "local-win32-release",
+            "configurePreset": "local-win32-release"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "local-apple-debug",
+            "configurePreset": "local-apple-debug",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
+            "name": "local-win32-debug",
+            "configurePreset": "local-win32-debug",
+            "output": {
+                "outputOnFailure": true
+            }
+        }
+    ]
+}
