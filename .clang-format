@@ -48,9 +48,6 @@ IncludeCategories:
     # 1. 표준 라이브러리: 확장자, 폴더 없는 <vector>, <cstdint>, <unordered_map>
     -   Regex: '^<[a-z_0-9]+>$'
         Priority: 1
-    # 3. 프로젝트 (꺾쇠로 써도 프로젝트로): <starter/...>
-    -   Regex: '^<starter/'
-        Priority: 3
     # 2. 외부 라이브러리: 나머지 <...> (gtest, glm, fmt, windows.h ...)
     -   Regex: '^<'
         Priority: 2

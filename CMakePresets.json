@@ -31,7 +31,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "VCPKG_MANIFEST_FEATURES": "tests",
-                "STARTER_BUILD_TESTS": "ON"
+                "BUILD_TESTS": "ON"
             }
         },
         {
@@ -65,7 +65,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "VCPKG_MANIFEST_FEATURES": "tests",
-                "STARTER_BUILD_TESTS": "ON"
+                "BUILD_TESTS": "ON"
             }
         },
         {

@@ -78,10 +78,10 @@ generate_version_file(
 # test
 # CMakeUserPresets.json 에서 관리한다
 # "cacheVariables": {
-#    "STARTER_BUILD_TESTS": "ON"
+#    "BUILD_TESTS": "ON"
 #  }
-option(STARTER_BUILD_TESTS "테스트 빌드" OFF)
-if (STARTER_BUILD_TESTS)
+option(BUILD_TESTS "테스트 빌드" OFF)
+if (BUILD_TESTS)
     enable_testing()
     run_test(
             "${VCPKG_NAME}_test"
