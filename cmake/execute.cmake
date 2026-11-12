@@ -24,7 +24,7 @@ function(make_library _OUT_VAR)
     endif ()
 
     if (ARG_UNPARSED_ARGUMENTS)
-        message(FATAL_ERROR "make_library: 모르는 인자: ${ARG_UNPARSED_ARGUMENTS}")
+        message(FATAL_ERROR "make_library: 알수없음=${ARG_UNPARSED_ARGUMENTS}")
     endif ()
 
 
@@ -50,6 +50,10 @@ function(make_executable _OUT_VAR)
 
     if (NOT ARG_SOURCES)
         message(FATAL_ERROR "make_executable: SOURCES 없음")
+    endif ()
+
+    if (ARG_UNPARSED_ARGUMENTS)
+        message(FATAL_ERROR "make_executable: 알수없음=${ARG_UNPARSED_ARGUMENTS}")
     endif ()
 
     add_executable(${ARG_EXE_NAME} ${ARG_SOURCES})

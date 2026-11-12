@@ -29,11 +29,29 @@ set(CMAKE_CXX_STANDARD ${CPP_VERSION})
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# 패키지 불러오기. cmake/package.cmake 에 내용추가해주기
-get_package(PACKAGES)
+# 패키지 불러오기
+set(PACKAGES "")
+# vcpkg 에서 가저오기
+#find_package(glm CONFIG REQUIRED)
+
+#git 프로젝트에서 라이브러리 불러오기
+#include(FetchContent)
+#FetchContent_Declare(
+#        ctls
+#        GIT_REPOSITORY https://github.com/d3v-friends/cpp-tools.git
+#        GIT_TAG v0.0.42
+#)
+#FetchContent_MakeAvailable(ctls)
+
+# 변수에 라이브러리 목록 추가하기
+# list(APPEND PACKAGES glm::glm ctls::ctls)
+
+
+# 내부에서만 사용할 라이브러리 만들기
 
 
 # 라이브러리 만들기
+# cmake 에서 이름을 한번 지정하면 전부 외부 노출이 된다.
 get_sources(
         LIB_SOURCES
         "${FILE_EXT}"
