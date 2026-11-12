@@ -1,3 +1,5 @@
+include_guard(GLOBAL)
+
 # 프로젝트를 라이브러리로 활성화 하기
 # _OUT_VAR 출력할 변수
 # _LIB_NAME 라이브러리 이름

@@ -1,3 +1,5 @@
+include_guard(GLOBAL)
+
 # 탬플릿을 이용하여 버전파일 만들기
 # 프로젝트에 버전입력한뒤에만 사용가능 (project(... VERSION ...) 뒤에서 호출)
 #
@@ -45,8 +47,6 @@ function(generate_version_file)
                 "$<BUILD_INTERFACE:${_GEN_DIR}>")
     endforeach ()
 endfunction()
-
-include_guard(GLOBAL)
 
 # 폴더 안의 헤더를 전부 include 하는 헤더(umbrella header) 생성
 #
