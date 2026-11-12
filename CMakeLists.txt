@@ -47,9 +47,6 @@ set(PACKAGES "")
 # list(APPEND PACKAGES glm::glm ctls::ctls)
 
 
-# 내부에서만 사용할 라이브러리 만들기
-
-
 # 라이브러리 만들기
 # cmake 에서 이름을 한번 지정하면 전부 외부 노출이 된다.
 get_sources(
@@ -86,12 +83,19 @@ release_win32(
         MANIFEST "${CMAKE_CURRENT_SOURCE_DIR}/platform/win32/app.manifest"
 )
 
-
-# file generator
+# version generate
 generate_version_file(
         NAME ${PACKAGE_NAME}
         TARGETS ${LIB} ${EXE}
 )
+
+# header generate
+generate_header(
+        OUTPUT "${CMAKE_CURRENT_SOURCE_DIR}/include/${PACKAGE_NAME}/${PACKAGE_NAME}.hpp"
+        DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/${PACKAGE_NAME}"
+        BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include"
+)
+
 
 # test
 # CMakeUserPresets.json 에서 관리한다
